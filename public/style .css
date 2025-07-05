@@ -1,0 +1,34 @@
+.video-background {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  color: white;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-background .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .video-background video {
+    display: none;
+  }
+  .video-background {
+    background: url('../images/pak-hero.jpg') center/cover no-repeat;
+  }
+}
